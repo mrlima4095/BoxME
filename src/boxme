@@ -20,3 +20,4 @@ shell.name=boxme
 shell.args=new,update
 
 new=execute boxme-new new
+uodate=execute clone raw.githubusercontent/mrlima4095/BoxME/main/install.sh;
