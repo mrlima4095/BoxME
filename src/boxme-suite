@@ -3,7 +3,7 @@ shell.args=new,getfilename,getmachname,getmachtype,save
 
 new=
 
-save=execute install nano; touch;
+save=execute install nano; touch; add [ VM Config ]; add; add name=$BOXME_VM_NAME; add type=$BOXME_VM_TYPE; add; add boxme-version=$BOXME_VERSION; add boxme-debug-mode=false; add boxme-bootloader=.boxme-
 
 quest.title=BoxME (New Machine)
 quest.label=Machine File
