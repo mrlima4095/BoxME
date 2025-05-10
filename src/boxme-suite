@@ -19,6 +19,6 @@ list.title=BoxME (Machine Type)
 list.content=Symbian,Native JVM,Android 2
 list.back=execute boxme-new getmachname
 
-Symbian=execute set BOXME_VM_TYPE=SYMBIAM; save
-Native JVM=execute set BOXME_VM_TYPE=JVMBOX; save
-Android 2=execute set BOXME_VM_TYPE=DROID2; save
+Symbian=execute set BOXME_VM_TYPE=SYMBIAM; save;
+Native JVM=execute set BOXME_VM_TYPE=JVMBOX; save;
+Android 2=execute set BOXME_VM_TYPE=DROID2; save;
