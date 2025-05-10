@@ -3,6 +3,7 @@ shell.args=new,getfilename,getmachname,getmachtype,save
 
 new=
 
+save=execute install nano; touch;
 
 quest.title=BoxME (New Machine)
 quest.label=Machine File
