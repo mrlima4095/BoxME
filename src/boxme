@@ -17,6 +17,6 @@ command=boxme
 file=
 
 shell.name=boxme
-shell.args=new
+shell.args=new,update
 
 new=execute boxme-new new
