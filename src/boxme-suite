@@ -1,0 +1,24 @@
+shell.name=boxme-new
+shell.args=new,getfilename,getmachname,getmachtype,save
+
+new=
+
+
+quest.title=BoxME (New Machine)
+quest.label=Machine File
+quest.key=BOXME_VM_FILE
+quest.cmd=execute boxme-new getmachname
+
+quest.title=BoxME (New Machine)
+quest.label=Machine Name
+quest.key=BOXME_VM_NAME
+quest.cmd=execute boxme-new getmachtype
+quest.back=execute boxme-new getfilename
+
+list.title=BoxME (Machine Type)
+list.content=Symbian,Native JVM,Android 2
+list.back=execute boxme-new getmachname
+
+Symbian=execute set BOXME_VM_TYPE=SYMBIAM; save
+Native JVM=execute set BOXME_VM_TYPE=JVMBOX; save
+Android 2=execute set BOXME_VM_TYPE=DROID2; save
