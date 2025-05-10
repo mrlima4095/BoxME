@@ -11,7 +11,7 @@ process.name=boxme
 
 include=.boxme-suite,/java/lib/settings
 
-config=execute set BOXME_VERSION=1.0
+config=execute set BOXME_VERSION=1.0;
 command=boxme
 
 file=
