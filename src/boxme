@@ -14,8 +14,6 @@ include=.boxme-suite,/java/lib/settings
 config=execute set BOXME_VERSION=1.0;
 command=boxme
 
-file=
-
 shell.name=boxme
 shell.args=new,update
 
