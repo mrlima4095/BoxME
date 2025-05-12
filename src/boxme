@@ -9,9 +9,9 @@ api.error=execute log add error BoxME requires OpenTTY API 1.14; echo [ BoxME ] 
 
 process.name=boxme
 
-include=.boxme-suite,/java/lib/settings
+include=.boxme-suite,.boxme-loader,/java/lib/settings
 
-config=execute set BOXME_VERSION=1.0;
+config=execute set BOXME_VERSION=1.0; 
 command=boxme
 
 shell.name=boxme
