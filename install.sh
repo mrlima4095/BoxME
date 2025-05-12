@@ -9,5 +9,3 @@ proxy BOXME_REPO/boxme-suite
 install .boxme-suite
 proxy BOXME_REPO/boxme-loader
 install .boxme-loader
-proxy BOXME_REPO/
-install
