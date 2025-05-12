@@ -11,8 +11,8 @@ process.name=boxme
 
 include=.boxme-suite,.boxme-loader,/java/lib/settings
 
-config=execute set BOXME_VERSION=1.0; 
-command=boxme
+config=execute set BOXME_VERSION=1.0; hash .boxme-loader; if ($OUTPUT == 0) bg exec warn BoxME installation is broken, crashing... & sleep 5 & exit; boxme-loader
+command=
 
 shell.name=boxme
 shell.args=new,update
