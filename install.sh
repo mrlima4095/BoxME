@@ -15,3 +15,4 @@ tick
 
 log add BoxME have been installed!
 echo [ BoxME ] Installation Complete!
+echo [ BoxME ]
