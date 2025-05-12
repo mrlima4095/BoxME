@@ -2,9 +2,9 @@
 
 command=boxme-loader
 
-boxme-loader=execute hash .boxme-suite; if ($OUTPUT == 0) execute boxme-loader loading-crash
+boxme-loader=execute hash .boxme-suite; boxme-loader loading-crash;
 
 shell.name=boxme-loader
 shell.args=loading-crash
 
-loading-crash=bg execute warn BoxME installation is broken, crashing...; sleep 5; exit
+loading-crash=if ($OUTPUT == 0) bg execute warn BoxME installation is broken, crashing...; sleep 5; exit
