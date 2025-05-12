@@ -15,7 +15,8 @@ config=execute set BOXME_VERSION=1.0; hash .boxme-loader; if ($OUTPUT == 0) bg e
 command=
 
 shell.name=boxme
-shell.args=new,update
+shell.args=new,docs,update
 
 new=execute boxme-new new
+docs=execute install nano; get .boxme-README; html; get nano;
 update=execute clone raw.githubusercontent/mrlima4095/BoxME/main/install.sh;
