@@ -1,3 +1,5 @@
+[ Config ]
+
 shell.name=boxme-new
 shell.args=new,getfilename,getmachname,getmachtype,save
 
