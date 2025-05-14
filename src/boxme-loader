@@ -1,12 +1,14 @@
 [ Config ]
 
-command=boxme-loader
-
-boxme-loader=execute hash .boxme-suite; boxme-loader loading-crash;
-
 shell.name=boxme-loader
-shell.args=loading-crash,init
+shell.args=init,
 
-loading-crash=if ($OUTPUT == 0) bg execute warn BoxME installation is broken, crashing...; sleep 5; exit;
+init=exec if ($BOOT_VM == $.BOOT_VM) x11 quest .boxme-loader & if ($BOOT_VM != $.BOOT_VM) execute tick Starting...; 
 
-init=
+
+[ DISPLAY ]
+
+quest.title=BoxME - Boot a Machine
+quest.label=Machine setting file:
+quest.cmd=execute boxme-loader init
+quest.key=BOOT_VM
