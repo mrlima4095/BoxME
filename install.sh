@@ -15,6 +15,6 @@ install .boxme-README
 tick
 
 
-log add BoxME have been installed!
+log add info BoxME have been installed!
 echo [ BoxME ] Installation Complete!
 echo [ BoxME ] Import 'boxme' to start
