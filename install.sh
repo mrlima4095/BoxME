@@ -12,6 +12,7 @@ proxy $BOXME_REPO/boxme-loader
 install .boxme-loader
 proxy $BOXME_REPO/README.html
 install .boxme-README
+get nano
 tick
 
 log add info BoxME have been installed!
