@@ -4,7 +4,7 @@ shell.name=boxme-new
 shell.args=new,getfilename,getmachname,getmachtype,save
 
 new=execute x11 set boxme.new.back; boxme-new getfilename
-save=execute install nano; touch; add [ VM Config ]; add; add name=$BOXME_VM_NAME; add type=$BOXME_VM_TYPE; add; add boxme-version=$BOXME_VERSION; add boxme-debug-mode=false; add boxme-bootloader=.boxme-loader; ; unset BOXME_VM_FILE; unset BOXME_VM_NAME; unset BOXME_VM_TYPE; get nano;
+save=execute install nano; touch; add [ VM Config ]; add; add name=$BOXME_VM_NAME; add type=$BOXME_VM_TYPE; add; add boxme-version=$BOXME_VERSION; add boxme-debug-mode=false; add boxme-bootloader=.boxme-loader; install $BOXME_VM_FILE ; unset BOXME_VM_FILE; unset BOXME_VM_NAME; unset BOXME_VM_TYPE; get nano;
 
 getfilename=execute install nano; touch; add quest.title=BoxME (New Machine); add quest.label=Machine File; add quest.key=BOXME_VM_FILE; add quest.cmd=execute boxme-new getmachname; add quest.back=execute case screen (boxme.new.back) x11 load boxme.new.back; x11 quest nano; get nano;
 getmachname=execute install nano; touch; add quest.title=BoxME (New Machine); add quest.label=Machine Name; add quest.key=BOXME_VM_NAME; add quest.cmd=execute boxme-new getmachtype; add quest.back=execute boxme-new getfilename; x11 quest nano; get nano;
