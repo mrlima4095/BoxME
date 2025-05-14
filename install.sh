@@ -1,6 +1,6 @@
 #!/java/bin/sh 
 
-set BOXME_REPO=raw.githubusercontent.com/mrlima4095/BoxME/main/src
+set BOXME_REPO=raw.githubusercontent.com/mrlima4095/BoxME/refs/heads/main/src/
 
 install nano
 tick Downloading BoxME...
