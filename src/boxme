@@ -11,12 +11,13 @@ process.name=boxme
 
 include=.boxme-suite,.boxme-loader,/java/lib/settings
 
-config=execute set BOXME_VERSION=1.0; hash .boxme-loader; if ($OUTPUT == 0) bg exec warn BoxME installation is broken, crashing... & sleep 5 & exit; boxme-loader
+config=execute set BOXME_VERSION=1.0; alias crash=if ($OUTPUT == 0) exec warn BoxME installation is broken, crashing... & sleep 5 & exit; tick Loading...; install nano; getty; hash .boxme-suite; crash; hash .boxme-loader
 command=
 
 shell.name=boxme
-shell.args=new,docs,update
+shell.args=new,start,help,update
 
 new=execute boxme-new new
-docs=execute install nano; get .boxme-README; html; get nano;
+start=execute boxme-loader init
+help=execute install nano; get .boxme-README; html; get nano;
 update=execute clone raw.githubusercontent/mrlima4095/BoxME/main/install.sh;
