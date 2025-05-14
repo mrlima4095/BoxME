@@ -14,7 +14,6 @@ proxy BOXME_REPO/README.html
 install .boxme-README
 tick
 
-
 log add info BoxME have been installed!
 echo [ BoxME ] Installation Complete!
 echo [ BoxME ] Import 'boxme' to start
