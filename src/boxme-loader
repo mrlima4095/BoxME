@@ -5,14 +5,14 @@ shell.args=init,err1,err2,symbinit,jvbxinit,doidinit,chkrom
 
 init=bg exec if ($BOOT_VM == $.BOOT_VM) x11 quest .boxme-loader & if ($BOOT_VM != $.BOOT_VM) execute tick Loading...; install nano; find boxme-version $BOOT_VM; if ($OUTPUT == 0) err1; if ($OUTPUT != 0) err2; find boxme-debug-mode $BOOT_VM; set VM_DEBUG_MODE=$OUTPUT; find boxme-bootloader; set VM_BOOTLOADER=$OUTPUT; find type $BOOT_VM; set VM_TYPE=$OUTPUT; if ($VM_TYPE == SYMBIAN) symbinit; if ($VM_TYPE == JVMBOX) jvbxinit; if ($VM_TYPE == DROID2) doidinit; 
 
-symbinit=execute 
-jvbxinit=execute 
-doidinit=execute 
+symbinit=execute boxme-loader chkrom; tick Starting...;
+jvbxinit=execute boxme-loader chkrom; tick Starting...;
+doidinit=execute boxme-loader chkrom; tick Starting...;
 
 err1=execute log add error BoxME - Boot failed (file isnt a VM); echo [ BoxME ] Boot failed!; echo [ BoxME ] See logs to more info.; tick; throw;
 err2=execute if ($OUTPUT != $BOXME_VERSION) exec log add error BoxME - Boot failed (BoxME is outdated); echo [ BoxME ] Boot failed!; echo [ BoxME ] See logs to more info.; tick; throw;
 
-chkrom=execute hash .$VM_TYPE-ROM; if ($OUTPUT == 0) execute tick Downloading ROM...
+chkrom=execute hash .$VM_TYPE-ROM; if ($OUTPUT == 0) exec tick Downloading ROM... & install nano & proxy raw.githubusercontent.com/mrlima4095/BoxME/refs/heads/main/img/$VM_TYPE; & install .$VM_TYPE-ROM & get nano & tick 
 
 [ DISPLAY ]
 
