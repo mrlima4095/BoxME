@@ -29,9 +29,9 @@ update=execute clone raw.githubusercontent/mrlima4095/BoxME/main/install.sh;
 
 list.title=BoxME Menu
 list.content=New Machine,Start a Machine,Settings,View more,About
-n
+
 New Machine=execute boxme-new new;
 Start a Machine=execute boxme-loader init;
 Settings=execute
 View more=execute boxme help;
-About=execute x11 list boxme; set OLD_TITLE=$TITLE; title BoxME $BOXME_VERSION; warn BoxME $BOXME_VERSION\n(C) 2025 - Mr. Lima\n\nBoxME runs Virtual Machines into J2ME Environment! title $OLD_TITLE; unset $OLD_TITLE;
+About=execute x11 list boxme; set OLD_TITLE=$TITLE; title BoxME $BOXME_VERSION; warn BoxME $BOXME_VERSION\n(C) 2025 - Mr. Lima\n\nBoxME runs Virtual Machines into J2ME Environment!; title $OLD_TITLE; unset $OLD_TITLE;
