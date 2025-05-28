@@ -6,7 +6,6 @@ shell.args=debug-mode
 debug-mode=execute install nano; touch; add list.title=Debug Mode (Default); add list.content=true,false; add list.back=x11 list boxme; add; add true=exec install nano & touch & add true & install .boxme-cfg-debugmode & get nano; add false=exec install nano & touch & add false & install .boxme-cfg-debugmode & get nano; x11 list nano; get nano;
 
 
-
 [ DISPLAY ]
 
 list.title=BoxME Settings
