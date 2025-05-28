@@ -14,6 +14,8 @@ err2=execute if ($OUTPUT != $BOXME_VERSION) exec log add error BoxME - Boot fail
 
 chkrom=execute hash .$VM_TYPE-ROM; if ($OUTPUT == 0) exec tick Downloading ROM... & install nano & proxy raw.githubusercontent.com/mrlima4095/BoxME/refs/heads/main/img/$VM_TYPE; & install .$VM_TYPE-ROM & get nano & tick 
 
+
+
 [ DISPLAY ]
 
 quest.title=BoxME - Boot a Machine
