@@ -12,9 +12,9 @@ process.name=boxhost2
 process.exit=execute 
 
 config=lua boxme.lua
-command=
+command=boxme
 
-boxme=execute x11 list boxme;
+boxme=execute set VM2ME=MAIN_MENU;
 
 shell.name=boxme
 shell.args=new,start,help,update
@@ -35,8 +35,21 @@ local function main()
     if STATE == nil then
         g.SetTicker("Loading...")
         
-        os.execute("execute set V2ME=")
+        os.execute("execute set BOXME_VERSION=1.0; ")
 
+    elseif STATE == "MAIN_MENU" then
+        local menu = {
+            title = "BoxME Menu",
+            itens = {
+                ["New Machine"] = "execute set VM2ME=NEW",
+                ["Start a Machine"] = "",
+                ["Settings"] = "",
+                ["Documentation"] = "",
+                ["About"] = "execute boxme; set OLD_TITLE=$TITLE; title BoxME $BOXME_VERSION; warn BoxME $BOXME_VERSION\n(C) 2025 - Mr. Lima\n\nBoxME runs Virtual Machines into J2ME Environment!; title $OLD_TITLE; unset $OLD_TITLE;"
+            }
+        }
+
+        g.BuildList(menu)
     end
 
 
