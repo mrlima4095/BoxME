@@ -9,7 +9,7 @@ api.error=execute log add error BoxME requires OpenTTY API 1.14; echo [ BoxME ] 
 api.match=minimum
 
 process.name=boxhost2
-process.exit=execute 
+process.exit=execute unset VM2ME; log add BoxME have been killed; echo [ BoxME ] Host service killed; true
 
 config=lua boxme.lua
 command=boxme
