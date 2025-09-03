@@ -42,10 +42,10 @@ local function main()
             title = "BoxME Menu",
             itens = {
                 ["New Machine"] = "execute set VM2ME=NEW",
-                ["Start a Machine"] = "",
-                ["Settings"] = "",
-                ["Documentation"] = "",
-                ["About"] = "execute boxme; set OLD_TITLE=$TITLE; title BoxME $BOXME_VERSION; warn BoxME $BOXME_VERSION\n(C) 2025 - Mr. Lima\n\nBoxME runs Virtual Machines into J2ME Environment!; title $OLD_TITLE; unset $OLD_TITLE;"
+                ["Start a Machine"] = "execute set VM2ME=START",
+                ["Settings"] = "execute set VM2ME=SETTINGS",
+                ["Documentation"] = "view <title>Documentation</title>",
+                ["About"] = "execute set VM2ME=MENU; boxme; set OLD_TITLE=$TITLE; title BoxME $BOXME_VERSION; warn BoxME $BOXME_VERSION\n(C) 2025 - Mr. Lima\n\nBoxME runs Virtual Machines into J2ME Environment!; title $OLD_TITLE; unset $OLD_TITLE;"
             }
         }
 
