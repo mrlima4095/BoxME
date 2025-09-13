@@ -18,18 +18,6 @@ boxme=lua boxme
 
 local host = os.getpid("boxhost2")
 
-graphics = {
-    display = function (screen) end,
-    Alert = function (config) end,
-    BuildScreen = function (config) end,
-    BuildList = function (config) end,
-    BuildQuest = function (config) end,
-    BuildEdit = function (config) end,
-    SetTitle = function (title) end,
-    WindowTitle = function (title) end,
-    SetTicker = function (text) end
-}
-
 local function menu()
     graphics.display(graphics.BuildList({
         title = "BoxME",
